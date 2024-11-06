@@ -1,0 +1,389 @@
+PS C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE> pytest parte1/func_test.py
+===================================================================================== test session starts =====================================================================================
+platform win32 -- Python 3.12.4, pytest-8.0.2, pluggy-1.5.0
+rootdir: C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE
+plugins: anyio-4.6.0, mock-3.11.1
+collected 96 items
+
+parte1\func_test.py ....................F...................FFFFFFFFFFFFFFFFFFFFF.
+
+========================================================================================== FAILURES ===========================================================================================
+__________________________________________________________________________________ test_numeros_no_primos[1] __________________________________________________________________________________
+
+num = 1
+
+    @pytest.mark.parametrize("num", [
+        1, 4, 6, 8, 9, 10, 12, 14, 15, 16,
+        18, 20, 21, 22, 24, 25, 26, 27, 28, 30
+    ])
+    def test_numeros_no_primos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: 1 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(1)
+
+parte1\func_test.py:18: AssertionError
+________________________________________________________________________________ test_numeros_no_positivos[0] _________________________________________________________________________________ 
+
+num = 0
+
+    @pytest.mark.parametrize("num", [0, -1, -2, -10, -17])
+    def test_numeros_no_positivos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: 0 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(0)
+
+parte1\func_test.py:23: AssertionError
+________________________________________________________________________________ test_numeros_no_positivos[-1] ________________________________________________________________________________ 
+
+num = -1
+
+    @pytest.mark.parametrize("num", [0, -1, -2, -10, -17])
+    def test_numeros_no_positivos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: -1 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(-1)
+
+parte1\func_test.py:23: AssertionError
+________________________________________________________________________________ test_numeros_no_positivos[-2] ________________________________________________________________________________ 
+
+num = -2
+
+    @pytest.mark.parametrize("num", [0, -1, -2, -10, -17])
+    def test_numeros_no_positivos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: -2 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(-2)
+
+parte1\func_test.py:23: AssertionError
+_______________________________________________________________________________ test_numeros_no_positivos[-10] ________________________________________________________________________________ 
+
+num = -10
+
+    @pytest.mark.parametrize("num", [0, -1, -2, -10, -17])
+    def test_numeros_no_positivos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: -10 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(-10)
+
+parte1\func_test.py:23: AssertionError
+_______________________________________________________________________________ test_numeros_no_positivos[-17] ________________________________________________________________________________ 
+
+num = -17
+
+    @pytest.mark.parametrize("num", [0, -1, -2, -10, -17])
+    def test_numeros_no_positivos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: -17 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(-17)
+
+parte1\func_test.py:23: AssertionError
+_____________________________________________________________________________________ test_flotantes[1.1] _____________________________________________________________________________________ 
+
+num = 1.1
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = 1.1
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+___________________________________________________________________________________ test_flotantes[3.1416] ____________________________________________________________________________________ 
+
+num = 3.1416
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = 3.1416
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_____________________________________________________________________________________ test_flotantes[5.5] _____________________________________________________________________________________ 
+
+num = 5.5
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = 5.5
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+____________________________________________________________________________________ test_flotantes[-7.7] _____________________________________________________________________________________ 
+
+num = -7.7
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = -7.7
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_____________________________________________________________________________________ test_flotantes[2.0] _____________________________________________________________________________________ 
+
+num = 2.0
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = 2.0
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+__________________________________________________________________________________ test_cadenas_de_texto[10] __________________________________________________________________________________ 
+
+num = '10'
+
+    @pytest.mark.parametrize("num", ["10", "three", "100", "", " "])
+    def test_cadenas_de_texto(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:33:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = '10'
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'str' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+________________________________________________________________________________ test_cadenas_de_texto[three] _________________________________________________________________________________ 
+
+num = 'three'
+
+    @pytest.mark.parametrize("num", ["10", "three", "100", "", " "])
+    def test_cadenas_de_texto(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:33:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = 'three'
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'str' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_________________________________________________________________________________ test_cadenas_de_texto[100] __________________________________________________________________________________ 
+
+num = '100'
+
+    @pytest.mark.parametrize("num", ["10", "three", "100", "", " "])
+    def test_cadenas_de_texto(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:33:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = '100'
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'str' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+___________________________________________________________________________________ test_cadenas_de_texto[] ___________________________________________________________________________________
+
+num = ''
+
+    @pytest.mark.parametrize("num", ["10", "three", "100", "", " "])
+    def test_cadenas_de_texto(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:33:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = ''
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'str' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+__________________________________________________________________________________ test_cadenas_de_texto[ ] ___________________________________________________________________________________ 
+
+num = ' '
+
+    @pytest.mark.parametrize("num", ["10", "three", "100", "", " "])
+    def test_cadenas_de_texto(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:33:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = ' '
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'str' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_______________________________________________________________________________ test_otros_tipos_de_datos[None] _______________________________________________________________________________ 
+
+num = None
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:38:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = None
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'NoneType' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_______________________________________________________________________________ test_otros_tipos_de_datos[num1] _______________________________________________________________________________ 
+
+num = []
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:38:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = []
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'list' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+_______________________________________________________________________________ test_otros_tipos_de_datos[num2] _______________________________________________________________________________ 
+
+num = {}
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:38:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = {}
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'dict' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+______________________________________________________________________________ test_otros_tipos_de_datos[False] _______________________________________________________________________________ 
+
+num = False
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: False no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(False)
+
+parte1\func_test.py:38: AssertionError
+_______________________________________________________________________________ test_otros_tipos_de_datos[True] _______________________________________________________________________________ 
+
+num = True
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: True no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(True)
+
+parte1\func_test.py:38: AssertionError
+_______________________________________________________________________________ test_otros_tipos_de_datos[num5] _______________________________________________________________________________ 
+
+num = [5]
+
+    @pytest.mark.parametrize("num", [None, [], {}, False, True, [5]])
+    def test_otros_tipos_de_datos(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+
+parte1\func_test.py:38:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = [5]
+
+    def es_primo(num):
+>       for i in range(2, num):
+E       TypeError: 'list' object cannot be interpreted as an integer
+
+parte1\func.py:2: TypeError
+=================================================================================== short test summary info =================================================================================== 
+FAILED parte1/func_test.py::test_numeros_no_primos[1] - AssertionError: Error: 1 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_no_positivos[0] - AssertionError: Error: 0 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_no_positivos[-1] - AssertionError: Error: -1 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_no_positivos[-2] - AssertionError: Error: -2 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_no_positivos[-10] - AssertionError: Error: -10 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_no_positivos[-17] - AssertionError: Error: -17 no debería ser primo
+FAILED parte1/func_test.py::test_flotantes[1.1] - TypeError: 'float' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_flotantes[3.1416] - TypeError: 'float' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_flotantes[5.5] - TypeError: 'float' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_flotantes[-7.7] - TypeError: 'float' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_flotantes[2.0] - TypeError: 'float' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_cadenas_de_texto[10] - TypeError: 'str' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_cadenas_de_texto[three] - TypeError: 'str' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_cadenas_de_texto[100] - TypeError: 'str' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_cadenas_de_texto[] - TypeError: 'str' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_cadenas_de_texto[ ] - TypeError: 'str' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[None] - TypeError: 'NoneType' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[num1] - TypeError: 'list' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[num2] - TypeError: 'dict' object cannot be interpreted as an integer
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[False] - AssertionError: Error: False no debería ser primo
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[True] - AssertionError: Error: True no debería ser primo
+FAILED parte1/func_test.py::test_otros_tipos_de_datos[num5] - TypeError: 'list' object cannot be interpreted as an integer
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! KeyboardInterrupt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE\parte1\func.py:3: KeyboardInterrupt
+(to show a full traceback on KeyboardInterrupt use --full-trace)
+=============================================================================== 22 failed, 40 passed in 31.13s ================================================================================ 
+PS C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE>

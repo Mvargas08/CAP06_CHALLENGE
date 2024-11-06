@@ -1,0 +1,55 @@
+PS C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE> pytest parte1/func_test.py
+===================================================================================== test session starts =====================================================================================
+platform win32 -- Python 3.12.4, pytest-8.0.2, pluggy-1.5.0
+rootdir: C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE
+plugins: anyio-4.6.0, mock-3.11.1
+collected 96 items
+
+parte1\func_test.py ..............................................F..F............F.................................                                                                     [100%]
+
+========================================================================================== FAILURES ===========================================================================================
+___________________________________________________________________________________ test_flotantes[3.1416] ____________________________________________________________________________________
+
+num = 3.1416
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: 3.1416 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(3.1416)
+
+parte1\func_test.py:28: AssertionError
+_____________________________________________________________________________________ test_flotantes[2.0] _____________________________________________________________________________________ 
+
+num = 2.0
+
+    @pytest.mark.parametrize("num", [1.1, 3.1416, 5.5, -7.7, 2.0])
+    def test_flotantes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: 2.0 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(2.0)
+
+parte1\func_test.py:28: AssertionError
+____________________________________________________________________________ test_numeros_muy_grandes[2147483647] _____________________________________________________________________________ 
+
+num = 2147483647
+
+    @pytest.mark.parametrize("num", [
+        10**10 + 7, 2**31 - 1, 10**20 + 9, 10**20 - 35, 10**100
+    ])
+    def test_numeros_muy_grandes(num):
+>       assert es_primo(num) == False, f"Error: {num} no debería ser primo"
+E       AssertionError: Error: 2147483647 no debería ser primo
+E       assert True == False
+E        +  where True = es_primo(2147483647)
+
+parte1\func_test.py:45: AssertionError
+=================================================================================== short test summary info =================================================================================== 
+FAILED parte1/func_test.py::test_flotantes[3.1416] - AssertionError: Error: 3.1416 no debería ser primo
+FAILED parte1/func_test.py::test_flotantes[2.0] - AssertionError: Error: 2.0 no debería ser primo
+FAILED parte1/func_test.py::test_numeros_muy_grandes[2147483647] - AssertionError: Error: 2147483647 no debería ser primo
+================================================================================ 3 failed, 93 passed in 0.23s ================================================================================= 
+PS C:\Users\manue\Documents\AI Programadores\HW_C6_MANUEL_VARGAS\CAP06_CHALLENGE>
+
