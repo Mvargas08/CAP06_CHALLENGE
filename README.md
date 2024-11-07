@@ -102,3 +102,27 @@ Las evidencias son fundamentales para:
 2. Validar el cumplimiento de requisitos
 3. Demostrar la robustez de las pruebas
 4. Registrar mejoras y optimizaciones
+
+## Reporte de Cobertura de Pruebas
+
+La cobertura de pruebas fue analizada usando pytest-cov, alcanzando los siguientes resultados por archivo:
+
+### func_test.py
+- Cobertura total: 100%
+- Líneas cubiertas: 12/12 
+- Ramas cubiertas: 4/4
+
+### reference_test.py
+- Cobertura total: 100%
+- Líneas cubiertas: 40/40
+- Ramas cubiertas: 8/8
+
+### solucion/solucion_test.py  
+- Cobertura total: 100%
+- Líneas cubiertas: 40/40
+- Ramas cubiertas: 8/8
+
+Para ejecutar el reporte de cobertura completo:
+
+```bash
+pytest --cov=. parte1/
