@@ -91,17 +91,12 @@ Suite de pruebas unitarias para validar el funcionamiento de `es_primo()`. Inclu
 
 ### `/evidencias/`
 Contiene capturas y documentación que demuestran:
-- Ejecución exitosa de pruebas ***(3 failed, 93 passed in 0.23s)***
+- Ejecución exitosa de pruebas ***(5 failed, 157 passed in 0.23s)***
 - Cobertura de código alcanzada
 - Resultados de pruebas de rendimiento
-- Casos de fallo detectados y corregidos
-- Comparativas entre versiones de la función
-
-Las evidencias son fundamentales para:
-1. Documentar el proceso de desarrollo
-2. Validar el cumplimiento de requisitos
-3. Demostrar la robustez de las pruebas
-4. Registrar mejoras y optimizaciones
+- Ejecución de pruebas unitarias
+- Conversación con la IA ChatGPT y Cody
+- Capturas de pantalla y detalles de la conversación
 
 ## Reporte de Cobertura de Pruebas
 
